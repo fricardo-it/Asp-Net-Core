@@ -1,0 +1,7 @@
+﻿@using DI_LifeCycle.Data
+
+@inject IOrderRepository OrderRepository
+
+Hello World!
+
+@OrderRepository.ObtainOrder().Id
