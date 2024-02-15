@@ -1,0 +1,82 @@
+﻿<html>
+<head>
+    <title>@ViewData["Title"] - My App Model</title>
+    <environment include="Development">
+        <link href="~/css/site_bundle.min.css" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/css/bootstrap.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              integrity="sha512-b2QcS5SsA8tZodcDtGRELiGv5SaKSk1vDHDaQRda0htPYWZ6046lr3kJ5bAAQdpV2mmA/4v0wQF9MyU6/pDIAg=="
+              crossorigin="anonymous"
+              referrerpolicy="no-referrer" />
+        <link href="~/css/site.css" rel="stylesheet" />
+    </environment>
+
+    <link rel="stylesheet" href="~/lib/font-awesome/css/fontawesome.css" />
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-white border-bottom mb-3">
+            <div class="container">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">AppModel</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Products" asp-controller="Registration" asp-action="Index">Registration</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="Sales" asp-controller="Order" asp-action="Index">Orders</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            My App Model - <email>contact</email>
+            My App Model2 - <email email-domain="newemail.com">support</email>
+
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/js/site_bundle.min.js"></script>
+        <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/jquery.js"
+                asp-fallback-test="window.jQuery"
+                integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+                crossorigin="anonymous"
+                referrerpolicy="no-referrer">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/js/bootstrap.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                integrity="sha512-WW8/jxkELe2CAiE4LvQfwm1rajOS8PHasCCx+knHG0gBHt8EXxS6T6tJRTGuDQVnluuAvMxWF4j8SNFDKceLFg=="
+                crossorigin="anonymous" 
+                referrerpolicy="no-referrer">
+        </script>
+        <script src="~/js/site.js"></script>
+    </environment>
+</body>
+</html>
